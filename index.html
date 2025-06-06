@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Transcription Tool</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎵 Video Transcription</h1>
+      <p>Convert video speech to text using AI-powered transcription</p>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">🎬</div>
+        <h4>Multiple Platforms</h4>
+        <p>YouTube, TikTok, Instagram, and more</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🌍</div>
+        <h4>Multi-Language</h4>
+        <p>Support for 50+ languages</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h4>Fast Processing</h4>
+        <p>Quick and accurate results</p>
+      </div>
+    </div>
+
+    <form id="transcriptionForm">
+      <div class="form-group">
+        <label for="videoUrl">Video URL</label>
+        <input type="url" id="videoUrl" placeholder="https://www.youtube.com/watch?v=..." />
+      </div>
+
+      <div class="form-group">
+        <label for="language">Language</label>
+        <select id="language">
+          <option value="en-US">English (US)</option>
+          <option value="es-ES">Spanish</option>
+        </select>
+      </div>
+
+      <div class="form-group file-upload">
+        <input type="file" id="audioFile" class="file-input" accept="audio/*,video/*" />
+        <label for="audioFile" class="file-label">📁 Or upload audio/video file (optional)</label>
+      </div>
+
+      <button type="submit" class="btn" id="submitBtn">Start Transcription</button>
+    </form>
+
+    <div class="progress-bar" id="progressBar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <p>Processing your video... This may take a few minutes.</p>
+    </div>
+
+    <div class="result" id="result">
+      <h3 id="resultTitle"></h3>
+      <div class="transcript" id="transcript"></div>
+      <div class="actions">
+        <button class="btn btn-secondary" id="copyBtn">📋 Copy Text</button>
+        <button class="btn btn-secondary" id="downloadBtn">💾 Download</button>
+        <button class="btn btn-secondary" id="shareBtn">🔗 Share</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
